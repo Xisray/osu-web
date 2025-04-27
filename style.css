@@ -1,0 +1,407 @@
+/* Общие стили для всего сайта */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Шапка сайта */
+header {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Навигационное меню */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Основное содержимое */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Подвал сайта */
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+/* Специфичные стили для разных страниц */
+
+/* Главная страница */
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  font-size: 3em;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* О баре */
+.about-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Меню */
+.menu-category {
+  margin-bottom: 40px;
+}
+
+.menu-item {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item-name {
+  font-weight: bold;
+}
+
+.menu-item-price {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Культурная программа */
+.event-day {
+  margin-bottom: 30px;
+}
+
+.event {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event h3 {
+  margin-top: 0;
+  color: #ff6600;
+}
+
+.event-time {
+  font-weight: bold;
+  color: #666;
+}
+
+/* Галерея */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Контакты */
+.contact-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.map {
+  width: 100%;
+  height: 400px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+/* Специальные классы */
+.highlight {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e65c00;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+  .about-section {
+      flex-direction: column;
+  }
+
+  .gallery {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 5px 0;
+  }
+}
+/* Добавляем в начало файла */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes colorChange {
+  0% { color: #ff6600; }
+  50% { color: #ffcc00; }
+  100% { color: #ff6600; }
+}
+
+/* Обновляем существующие стили с анимациями */
+
+/* Шапка с анимацией */
+header {
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Навигация с подчеркиванием при наведении */
+nav ul li a {
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Герой-секция с параллакс-эффектом */
+.hero {
+  background-attachment: fixed;
+  transition: all 0.3s ease;
+}
+
+.hero:hover {
+  /* transform: scale(1.01); */
+}
+
+/* Карточки меню с анимацией */
+.menu-item {
+  transition: all 0.3s ease;
+  animation: slideUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* События с последовательной анимацией */
+.event-day {
+  animation: fadeIn 1s ease-out;
+}
+
+.event {
+  transition: all 0.3s ease;
+}
+
+.event:hover {
+  background-color: #fff8e6;
+}
+
+/* Галерея с улучшенными анимациями */
+.gallery img {
+  transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.gallery img:hover {
+  transform: scale(1.1) rotate(2deg);
+  z-index: 10;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Кнопки с пульсацией */
+.btn {
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  animation: none;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+/* Заголовки с анимацией */
+h2 {
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ff6600;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+h2:hover::after {
+  transform: scaleX(1);
+}
+
+/* Контакты с анимацией */
+.contact-info {
+  transition: all 0.5s ease;
+  animation: slideUp 0.8s ease-out;
+}
+
+.contact-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Анимация для карты */
+.map {
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.map:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Последовательная анимация для элементов меню */
+.menu-item:nth-child(1) { animation-delay: 0.1s; }
+.menu-item:nth-child(2) { animation-delay: 0.2s; }
+.menu-item:nth-child(3) { animation-delay: 0.3s; }
+.menu-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* Анимация логотипа */
+header h1 .highlight {
+  display: inline-block;
+  animation: colorChange 3s infinite;
+}
+
